@@ -5,9 +5,13 @@
 .features__1-top,
 .features__2-top{
   background-color: @color-blue;
-  padding: 60px 0 45px;
   text-align: center;
   color: white;
+}
+
+.features__1-top-text,
+.features__2-top-text{
+  padding: 60px 20px 45px;
 }
 
 .features__1-top-photo{
@@ -16,7 +20,7 @@
   background-size: cover;
   background-repeat: no-repeat;
   @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
-      background: url("../img/photo-city-mobile@2x.jpg.jpg");
+      background: url("../img/photo-city-mobile@2x.jpg");
   }
   @media (min-width: 700px) {
       background: url("../img/photo-city-tablet@1x.jpg");
@@ -29,6 +33,28 @@
   }
   @media (min-width: 960px) and (min-resolution: 144dpi), (min-width: 700px) and (min-resolution: 1.5dppx) {
       background: url("../img/photo-city@2x.jpg");
+  }
+}
+
+.features__2-top-photo{
+  height: 260px;
+  background-image: url("../img/photo-4-mobile@1x.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+      background: url("../img/photo-4-mobile@2x.jpg");
+  }
+  @media (min-width: 700px) {
+      background: url("../img/photo-4-tablet@1x.jpg");
+  }
+  @media (min-width: 700px) and (min-resolution: 144dpi), (min-width: 700px) and (min-resolution: 1.5dppx) {
+      background: url("../img/photo-4-tablet@2x.jpg");
+  }
+  @media (min-width: 960px) {
+      background: url("../img/photo-4-desktop@1x.jpg");
+  }
+  @media (min-width: 960px) and (min-resolution: 144dpi), (min-width: 700px) and (min-resolution: 1.5dppx) {
+      background: url("../img/photo-4-desktop@2x.jpg");
   }
 }
 
@@ -48,14 +74,56 @@
   color: @color-white;
 }
 
+.features__1-bottom{
+  padding: 40px 20px 40px;
+}
+
 .features__1-bottom-icon-header{
   display: flex;
   flex-direction: row;
   fill: @color-blue;
-  padding: 0 20px;
   text-align: left;
+}
+
+.features__1-icon-house,
+.features__1-icon-gift,
+.features__1-icon-burger{
+  margin-right: 12px;
+  position: relative;
+  top: -10px;
 }
 
 .features__1-bottom-icon-text{
   width: 210px;
+  margin-bottom: 15px;
+}
+
+.features__1-bottom-icon-text h2{
+  margin-bottom: 20px;
+}
+
+.features__2-bottom-icon-header{
+  padding: 35px 35px 30px;
+  background: @color-lightgray;
+  position: relative;
+}
+
+.features__2-bottom-icon-header::after{
+  position: absolute;
+  content: "";
+  text-align: center;
+  left: 30px;
+  bottom: 0;
+  width: 80%;
+  height: 1px;
+  background: #d6d6d6;
+}
+
+.features__2-bottom-icon-header h2{
+  margin-bottom: 20px;
+}
+
+.features__2-bottom-icon-header span{
+  display: block;
+  margin-bottom: 20px;
 }

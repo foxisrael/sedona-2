@@ -53,6 +53,21 @@ li {
   clear: both;
   content: "";
 }
+.btn {
+  display: block;
+  background-color: #81b3d2;
+  color: #fff;
+  text-transform: uppercase;
+  font-family: 'PT Sans', sans-serif;
+  font-weight: bold;
+  font-size: 21px;
+  line-height: 26px;
+  width: 280px;
+  height: 58px;
+  margin-bottom: 50px;
+  outline: none;
+  border: 0;
+}
 .page-header__navigation-item {
   height: 55px;
   background-color: #81b3d2;
@@ -61,6 +76,7 @@ li {
   border-bottom: 1px solid #678fa8;
   border-top: 1px solid #9ac2db;
   position: relative;
+  z-index: 2;
 }
 .page-header__navigation-item:first-child {
   border-top: none;
@@ -69,7 +85,7 @@ li {
   border-bottom: none;
 }
 .page-header__navigation-item:last-child {
-  background-color: #fff;
+  background-color: transparent;
   border-bottom: none;
   padding: 0;
   height: auto;
@@ -93,19 +109,36 @@ li {
   cursor: pointer;
 }
 .promo {
+  min-height: 610px;
   position: relative;
+  top: -25px;
+  z-index: 1;
+  text-align: center;
+}
+.promo__bg {
   height: 390px;
+  text-align: center;
   background: url("../img/bg-back-mobile@1x.jpg");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
   padding: 90px 0 0;
+  margin: 0 auto 45px;
 }
 .promo__title {
   display: block;
   width: 280px;
   height: 215px;
-  margin: 0 auto 90px;
+  margin: 0 auto;
+}
+.promo h2 {
+  width: 260px;
+  margin: 0 auto 40px;
+  line-height: 26px;
+}
+.promo p {
+  width: 260px;
+  margin: 0 auto;
 }
 .features {
   text-align: center;
@@ -113,13 +146,22 @@ li {
 .features__1-top,
 .features__2-top {
   background-color: #81b3d2;
-  padding: 60px 0 45px;
   text-align: center;
   color: white;
+}
+.features__1-top-text,
+.features__2-top-text {
+  padding: 60px 20px 45px;
 }
 .features__1-top-photo {
   height: 260px;
   background-image: url("../img/photo-city-mobile@1x.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.features__2-top-photo {
+  height: 260px;
+  background-image: url("../img/photo-4-mobile@1x.jpg");
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -136,55 +178,173 @@ li {
 .features__2-top p {
   color: #fff;
 }
+.features__1-bottom {
+  padding: 40px 20px 40px;
+}
 .features__1-bottom-icon-header {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-direction: row;
       flex-direction: row;
   fill: #81b3d2;
-  padding: 0 20px;
   text-align: left;
+}
+.features__1-icon-house,
+.features__1-icon-gift,
+.features__1-icon-burger {
+  margin-right: 12px;
+  position: relative;
+  top: -10px;
 }
 .features__1-bottom-icon-text {
   width: 210px;
+  margin-bottom: 15px;
+}
+.features__1-bottom-icon-text h2 {
+  margin-bottom: 20px;
+}
+.features__2-bottom-icon-header {
+  padding: 35px 35px 30px;
+  background: #eee;
+  position: relative;
+}
+.features__2-bottom-icon-header::after {
+  position: absolute;
+  content: "";
+  text-align: center;
+  left: 30px;
+  bottom: 0;
+  width: 80%;
+  height: 1px;
+  background: #d6d6d6;
+}
+.features__2-bottom-icon-header h2 {
+  margin-bottom: 20px;
+}
+.features__2-bottom-icon-header span {
+  display: block;
+  margin-bottom: 20px;
+}
+.booking {
+  min-height: 640px;
+  padding: 30px 20px 0;
+  text-align: center;
+}
+.booking h2 {
+  margin-bottom: 30px;
+}
+.booking p {
+  margin-bottom: 40px;
+}
+.booking__map {
+  height: 350px;
+  background-image: url("../img/bg-map-mobile@1x.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.page-footer {
+  text-align: center;
+  padding: 40px 0 25px;
+}
+.page-footer__social {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+  padding: 0 85px;
+  margin-bottom: 30px;
+}
+.page-footer h2 {
+  font-family: 'PT Sans', sans-serif;
+  font-size: 21px;
+  line-height: 26px;
+  margin-bottom: 40px;
+}
+.page-footer__icon {
+  display: block;
+  background: #81b3d2;
+  width: 46px;
+  height: 48px;
+}
+.page-footer__icon-tw,
+.page-footer__icon-fb,
+.page-footer__icon-ytb {
+  position: relative;
+  top: 30%;
+  fill: #fff;
+}
+.page-footer__icon-copyright {
+  display: inline;
+  position: relative;
+  top: 12px;
 }
 @media (min-width: 700px) {
-  .promo {
+  .promo__bg {
     background: url("../img/bg-back-tablet@1x.jpg");
   }
   .features__1-top-photo {
     background: url("../img/photo-city-tablet@1x.jpg");
   }
+  .features__2-top-photo {
+    background: url("../img/photo-4-tablet@1x.jpg");
+  }
+  .booking__map {
+    background: url("../img/bg-map-tablet@1x.jpg");
+  }
 }
 @media (min-width: 700px) and (-webkit-min-device-pixel-ratio: 1.5), (min-width: 700px) and (min-resolution: 144dpi), (min-width: 700px) and (min-resolution: 1.5dppx) {
-  .promo {
+  .promo__bg {
     background: url("../img/bg-back-tablet@2x.jpg");
   }
   .features__1-top-photo {
     background: url("../img/photo-city-tablet@2x.jpg");
   }
+  .features__2-top-photo {
+    background: url("../img/photo-4-tablet@2x.jpg");
+  }
+  .booking__map {
+    background: url("../img/bg-map-tablet@2x.jpg");
+  }
 }
 @media (min-width: 960px) and (-webkit-min-device-pixel-ratio: 1.5), (min-width: 960px) and (min-resolution: 144dpi), (min-width: 700px) and (-webkit-min-device-pixel-ratio: 1.5), (min-width: 700px) and (min-resolution: 1.5dppx) {
-  .promo {
+  .promo__bg {
     background: url("../img/bg-back-desktop@2x.jpg");
   }
   .features__1-top-photo {
     background: url("../img/photo-city@2x.jpg");
   }
+  .features__2-top-photo {
+    background: url("../img/photo-4-desktop@2x.jpg");
+  }
+  .booking__map {
+    background: url("../img/bg-map-desktop@2x.jpg");
+  }
 }
 @media (min-width: 960px) {
-  .promo {
+  .promo__bg {
     background: url("../img/bg-back-desktop@1x.jpg");
   }
   .features__1-top-photo {
     background: url("../img/photo-city@1x.jpg");
   }
+  .features__2-top-photo {
+    background: url("../img/photo-4-desktop@1x.jpg");
+  }
+  .booking__map {
+    background: url("../img/bg-map-desktop@1x.jpg");
+  }
 }
 @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
-  .promo {
+  .promo__bg {
     background: url("../img/bg-back-mobile@2x.jpg");
   }
   .features__1-top-photo {
-    background: url("../img/photo-city-mobile@2x.jpg.jpg");
+    background: url("../img/photo-city-mobile@2x.jpg");
+  }
+  .features__2-top-photo {
+    background: url("../img/photo-4-mobile@2x.jpg");
+  }
+  .booking__map {
+    background: url("../img/bg-map-mobile@2x.jpg");
   }
 }
