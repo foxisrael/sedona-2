@@ -107,8 +107,11 @@ li {
   height: auto;
 }
 .page-header__logo {
-  width: 102px;
-  height: 83px;
+  display: block;
+  background-image: url("../img/logo-sedona-mobile.svg");
+  width: 100px;
+  height: 84px;
+  margin: 0 auto;
 }
 .page-header__menu-cross {
   position: absolute;
@@ -139,7 +142,19 @@ li {
   background-size: cover;
   background-repeat: no-repeat;
   padding: 90px 0 0;
+  position: relative;
   margin: 0 auto 45px;
+}
+.promo__bg::before {
+  display: block;
+  content: "";
+  position: absolute;
+  bottom: 0;
+  background-image: url("../img/bg-intro-triangle-desktop.svg");
+  background-position: bottom center;
+  background-repeat: no-repeat;
+  height: 25px;
+  width: 100%;
 }
 .promo__title {
   display: block;
@@ -158,6 +173,17 @@ li {
 }
 .features {
   text-align: center;
+  position: relative;
+}
+.features::before {
+  display: block;
+  content: "";
+  position: absolute;
+  top: 0;
+  background-image: url("../img/bg-triangle.svg");
+  background-position: bottom center;
+  height: 15px;
+  width: 100%;
 }
 .features__1-top,
 .features__2-top {
@@ -173,12 +199,14 @@ li {
   height: 260px;
   background-image: url("../img/photo-city-mobile@1x.jpg");
   background-size: cover;
+  overflow: hidden;
   background-repeat: no-repeat;
 }
 .features__2-top-photo {
   height: 260px;
-  background-image: url("../img/photo-4-mobile@1x.jpg");
+  background-image: url("../img/photo-bridge-mobile@1x.jpg");
   background-size: cover;
+  overflow: hidden;
   background-repeat: no-repeat;
 }
 .features__1-top h2,
@@ -195,7 +223,8 @@ li {
   color: #fff;
 }
 .features__1-bottom {
-  padding: 40px 20px 40px;
+  padding: 40px 20px;
+  background-color: #fff;
 }
 .features__1-bottom-icon-header {
   display: -ms-flexbox;
@@ -205,9 +234,9 @@ li {
   fill: #81b3d2;
   text-align: left;
 }
-.features__1-icon-house,
+.features__1-icon-burger,
 .features__1-icon-gift,
-.features__1-icon-burger {
+.features__1-icon-house {
   margin-right: 12px;
   position: relative;
   top: -10px;
@@ -243,7 +272,7 @@ li {
 }
 .booking {
   min-height: 640px;
-  padding: 30px 0;
+  padding: 30px 0 0;
   text-align: center;
   margin: 0 auto;
 }
@@ -320,56 +349,352 @@ li {
   .promo__bg {
     background: url("../img/bg-back-tablet@1x.jpg");
   }
-  .features__1-top-photo {
-    background: url("../img/photo-city-tablet@1x.jpg");
-  }
-  .features__2-top-photo {
-    background: url("../img/photo-4-tablet@1x.jpg");
-  }
-  .booking__map {
-    background: url("../img/bg-map-tablet@1x.jpg");
-  }
 }
 @media (min-width: 700px) and (-webkit-min-device-pixel-ratio: 1.5), (min-width: 700px) and (min-resolution: 144dpi), (min-width: 700px) and (min-resolution: 1.5dppx) {
   .promo__bg {
     background: url("../img/bg-back-tablet@2x.jpg");
-  }
-  .features__1-top-photo {
-    background: url("../img/photo-city-tablet@2x.jpg");
-  }
-  .features__2-top-photo {
-    background: url("../img/photo-4-tablet@2x.jpg");
-  }
-  .booking__map {
-    background: url("../img/bg-map-tablet@2x.jpg");
   }
 }
 @media (min-width: 960px) and (-webkit-min-device-pixel-ratio: 1.5), (min-width: 960px) and (min-resolution: 144dpi), (min-width: 700px) and (-webkit-min-device-pixel-ratio: 1.5), (min-width: 700px) and (min-resolution: 1.5dppx) {
   .promo__bg {
     background: url("../img/bg-back-desktop@2x.jpg");
   }
+}
+@media (min-width: 768px) {
+  .wrapper {
+    width: 100%;
+    max-width: 768px;
+    margin: 0 auto;
+    padding: 0;
+  }
+  h2 {
+    font-family: 'PT Sans', sans-serif;
+    font-size: 21px;
+  }
+  .btn {
+    width: 460px;
+    height: 60px;
+  }
+  .page-header {
+    padding: 0 50px;
+  }
+  .page-header__navigation-items {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+  }
+  .page-header__navigation-item {
+    background-color: #fff;
+    border: none;
+    color: #000;
+    font-size: 14px;
+    line-height: 26px;
+  }
+  .page-header__navigation-item:nth-child(1) {
+    -ms-flex-order: 1;
+    order: 1;
+    width: 20%;
+    text-align: left;
+  }
+  .page-header__navigation-item:nth-child(2) {
+    -ms-flex-order: 2;
+    order: 2;
+    width: 20%;
+    text-align: left;
+  }
+  .page-header__navigation-item:nth-child(3) {
+    -ms-flex-order: 4;
+    order: 4;
+    width: 20%;
+    text-align: right;
+  }
+  .page-header__navigation-item:nth-child(4) {
+    -ms-flex-order: 5;
+    order: 5;
+    width: 20%;
+    text-align: right;
+  }
+  .page-header__navigation-item:nth-child(5) {
+    -ms-flex-order: 3;
+    order: 3;
+    width: 20%;
+  }
+  .page-header__menu-burger,
+  .page-header__menu-cross {
+    display: none;
+  }
+  .promo {
+    top: -25px;
+  }
+  .promo__bg {
+    height: 520px;
+  }
+  .promo__bg::before {
+    background-position: top center;
+    height: 60px;
+    bottom: -3px;
+  }
+  .promo h2 {
+    width: 500px;
+  }
+  .promo p {
+    width: 500px;
+  }
   .features__1-top-photo {
-    background: url("../img/photo-city@2x.jpg");
+    background: url("../img/photo-city-tablet@1x.jpg");
   }
   .features__2-top-photo {
-    background: url("../img/photo-4-desktop@2x.jpg");
+    background: url("../img/photo-bridge-tablet@1x.jpg");
+  }
+  .features::before {
+    display: none;
+  }
+  .features__1-top {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+  }
+  .features__2-top {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: row-reverse;
+    flex-direction: row-reverse;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+  }
+  .features__1-top-text,
+  .features__2-top-text {
+    width: 255px;
+    height: 255px;
+    padding: 40px 20px;
+  }
+  .features__1-top-photo,
+  .features__2-top-photo {
+    width: 513px;
+    height: 255px;
+    background-size: 100%;
+    background-position: center;
+  }
+  .features__1-bottom {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    padding: 40px 50px;
+  }
+  .features__1-bottom-icon-header {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    text-align: center;
+  }
+  .features__1-bottom-item:nth-child(2) p {
+    width: 180px;
+    margin: 0 auto;
+  }
+  .features__1-icon-burger,
+  .features__1-icon-gift,
+  .features__1-icon-house {
+    position: static;
+    margin: 0 auto 30px;
+  }
+  .features__1-icon-house {
+    width: 75px;
+    height: 73px;
+  }
+  .features__1-icon-gift {
+    width: 64px;
+    height: 73px;
+  }
+  .features__1-icon-burger {
+    width: 77px;
+    height: 73px;
+  }
+  .features__1-bottom-item:nth-child(1) {
+    -ms-flex-order: 1;
+    order: 1;
+  }
+  .features__1-bottom-item:nth-child(2) {
+    -ms-flex-order: 3;
+    order: 3;
+  }
+  .features__1-bottom-item:nth-child(3) {
+    -ms-flex-order: 2;
+    order: 2;
+  }
+  .features__2-bottom {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    padding: 0 50px;
+    background-color: #eee;
+  }
+  .features__2-bottom-item {
+    width: 32%;
+  }
+  .features__2-bottom-item:nth-child(1) {
+    width: 35%;
+  }
+  .features__2-bottom-icon-header::after {
+    display: none;
   }
   .booking__map {
-    background: url("../img/bg-map-desktop@2x.jpg");
+    background: url("../img/bg-map-tablet@1x.jpg");
+  }
+  .booking {
+    text-align: center;
+  }
+  .booking h2 {
+    font-size: 30px;
+  }
+  .booking p {
+    width: 500px;
+    margin: 0 auto 50px;
+  }
+  .page-footer {
+    padding: 0 50px;
+    height: 120px;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+  .page-footer h2 {
+    margin: 0;
+  }
+  .page-footer__social {
+    margin: 0;
+    width: 320px;
+  }
+  .page-footer__copyright {
+    position: relative;
+    top: -10px;
+  }
+}
+@media (min-width: 768px) and (-webkit-min-device-pixel-ratio: 1.5), (min-width: 768px) and (min-resolution: 144dpi), (min-width: 768px) and (min-resolution: 1.5dppx) {
+  .features__1-top-photo {
+    background: url("../img/photo-city-tablet@2x.jpg");
+  }
+  .features__2-top-photo {
+    background: url("../img/photo-bridge-tablet@2x.jpg");
+  }
+  .booking__map {
+    background: url("../img/bg-map-tablet@2x.jpg");
   }
 }
 @media (min-width: 960px) {
   .promo__bg {
     background: url("../img/bg-back-desktop@1x.jpg");
   }
+}
+@media (min-width: 1200px) {
+  body {
+    background-color: #eee;
+  }
+  .wrapper {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  }
+  h2 {
+    font-family: 'PT Sans', sans-serif;
+    font-size: 21px;
+  }
+  .page-header {
+    height: 55px;
+    padding: 0 70px;
+    background-color: #fff;
+  }
+  .page-header__logo {
+    display: block;
+    background-image: url("../img/logo-sedona-desktop.svg");
+    background-repeat: no-repeat;
+    width: 190px;
+    height: 100px;
+    margin: 0 auto;
+  }
+  .promo {
+    top: 0;
+    background-color: #fff;
+    padding: 0 0 55px;
+  }
+  .promo__bg::before {
+    background-position: top center;
+    background-size: 102%;
+    height: 60px;
+    bottom: -2px;
+  }
+  .promo p {
+    width: 100%;
+  }
   .features__1-top-photo {
     background: url("../img/photo-city@1x.jpg");
   }
   .features__2-top-photo {
-    background: url("../img/photo-4-desktop@1x.jpg");
+    background: url("../img/photo-bridge@1x.jpg");
+  }
+  .features__1-top-text,
+  .features__2-top-text {
+    width: 400px;
+    height: 255px;
+    padding: 60px 40px;
+  }
+  .features__1-top-photo,
+  .features__2-top-photo {
+    width: 800px;
+    height: 255px;
+    background-size: cover;
+    overflow: hidden;
+    background-repeat: no-repeat;
+  }
+  .features__1-bottom {
+    padding: 65px 70px 80px;
+  }
+  .features__1-bottom-icon-text,
+  .features__1-bottom-item {
+    width: 30%;
+    margin: 0 auto;
+  }
+  .features__1-bottom-icon-text,
+  .features__1-bottom-item:nth-child(2) p {
+    width: 100%;
+  }
+  .features__2-bottom {
+    padding: 50px 70px 70px;
+  }
+  .features__2-bottom-item {
+    padding: 0;
   }
   .booking__map {
     background: url("../img/bg-map-desktop@1x.jpg");
+  }
+  .booking {
+    background-color: #fff;
+    padding: 60px 0 0;
+  }
+  .page-footer {
+    background-color: #fff;
+  }
+}
+@media (min-width: 1200px) and (-webkit-min-device-pixel-ratio: 1.5), (min-width: 1200px) and (min-resolution: 144dpi), (min-width: 1200px) and (min-resolution: 1.5dppx) {
+  .features__1-top-photo {
+    background: url("../img/photo-city@2x.jpg");
+  }
+  .features__2-top-photo {
+    background: url("../img/photo-bridge@2x.jpg");
+  }
+  .booking__map {
+    background: url("../img/bg-map-desktop@2x.jpg");
   }
 }
 @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
@@ -380,7 +705,7 @@ li {
     background: url("../img/photo-city-mobile@2x.jpg");
   }
   .features__2-top-photo {
-    background: url("../img/photo-4-mobile@2x.jpg");
+    background: url("../img/photo-bridge-mobile@2x.jpg");
   }
   .booking__map {
     background: url("../img/bg-map-mobile@2x.jpg");

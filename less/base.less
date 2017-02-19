@@ -70,3 +70,39 @@ li{
   clear: both;
   content: "";
 }
+
+@media (min-width: 768px) {
+  .wrapper {
+    width: 100%;
+    max-width: 768px;
+    margin: 0 auto;
+    padding: 0;
+  }
+
+  h2 {
+    font-family: @font-family;
+    font-size: @font-size-h2+3;
+  }
+
+}
+
+
+@media (min-width: 1200px) {
+  body{
+    background-color: @color-lightgray;
+  }
+
+  .wrapper {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+  }
+
+  h2 {
+    font-family: @font-family;
+    font-size: @font-size-h2+3;
+  }
+
+}

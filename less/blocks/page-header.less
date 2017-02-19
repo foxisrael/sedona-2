@@ -10,12 +10,12 @@
 }
 
 .page-header__navigation-item:hover {
-  background-color: @color-blue-hover;
+    background-color: @color-blue-hover;
 }
 
 .page-header__navigation-item:active {
-  background-color: @color-blue-active;
-  color: rgba(255, 255, 255, 0.3);
+    background-color: @color-blue-active;
+    color: rgba(255, 255, 255, 0.3);
 }
 
 .page-header__navigation-item:first-child {
@@ -34,8 +34,11 @@
 }
 
 .page-header__logo {
-    width: 102px;
-    height: 83px;
+    display: block;
+    background-image: url("../img/logo-sedona-mobile.svg");
+    width: 100px;
+    height: 84px;
+    margin: 0 auto;
 }
 
 .page-header__menu-cross {
@@ -52,4 +55,73 @@
     top: 20px;
     right: 15px;
     cursor: pointer;
+}
+@media (min-width: 768px) {
+    .page-header {
+        padding: 0 50px;
+    }
+
+    .page-header__navigation-items {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .page-header__navigation-item {
+        background-color: @color-white;
+        border: none;
+        color: @color-black;
+        font-size: 14px;
+        line-height: 26px;
+    }
+
+    .page-header__navigation-item:nth-child(1) {
+        order: 1;
+        width: 20%;
+        text-align: left;
+    }
+
+    .page-header__navigation-item:nth-child(2) {
+        order: 2;
+        width: 20%;
+        text-align: left;
+    }
+
+    .page-header__navigation-item:nth-child(3) {
+        order: 4;
+        width: 20%;
+        text-align: right;
+    }
+
+    .page-header__navigation-item:nth-child(4) {
+        order: 5;
+        width: 20%;
+        text-align: right;
+    }
+
+    .page-header__navigation-item:nth-child(5) {
+        order: 3;
+        width: 20%;
+    }
+
+    .page-header__menu-burger,
+    .page-header__menu-cross {
+        display: none;
+    }
+}
+@media (min-width: 1200px) {
+    .page-header {
+        height: 55px;
+        padding: 0 70px;
+        background-color: @color-white;
+    }
+
+    .page-header__logo {
+        display: block;
+        background-image: url("../img/logo-sedona-desktop.svg");
+        background-repeat: no-repeat;
+        width: 190px;
+        height: 100px;
+        margin: 0 auto;
+    }
+
 }

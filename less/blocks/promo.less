@@ -14,6 +14,7 @@
     background-size: cover;
     background-repeat: no-repeat;
     padding: 90px 0 0;
+    position: relative;
     @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
         background: url("../img/bg-back-mobile@2x.jpg");
     }
@@ -32,6 +33,18 @@
     margin: 0 auto 45px;
 }
 
+.promo__bg::before {
+    display: block;
+    content: "";
+    position: absolute;
+    bottom: 0;
+    background-image: url("../img/bg-intro-triangle-desktop.svg");
+    background-position: bottom center;
+    background-repeat: no-repeat;
+    height: 25px;
+    width: 100%;
+}
+
 .promo__title {
     display: block;
     width: 280px;
@@ -48,4 +61,45 @@
 .promo p {
     width: 260px;
     margin: 0 auto;
+}
+@media (min-width: 768px) {
+    .promo {
+        top: -25px;
+    }
+
+    .promo__bg {
+        height: 520px;
+    }
+
+    .promo__bg::before {
+        background-position: top center;
+        height: 60px;
+        bottom: -3px;
+    }
+
+    .promo h2 {
+        width: 500px;
+    }
+
+    .promo p {
+        width: 500px;
+    }
+}
+@media (min-width: 1200px) {
+    .promo {
+        top: 0;
+        background-color: @color-white;
+        padding: 0 0 55px;
+    }
+
+    .promo__bg::before {
+        background-position: top center;
+        background-size: 102%;
+        height: 60px;
+        bottom: -2px;
+    }
+
+    .promo p {
+        width: 100%;
+    }
 }

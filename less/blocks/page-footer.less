@@ -61,3 +61,32 @@
 .page-footer__copyright:active .page-footer__icon-copyright {
     fill: @color-lightgray;
 }
+@media (min-width: 768px) {
+    .page-footer {
+        padding: 0 50px;
+        height: 120px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .page-footer h2 {
+        margin: 0;
+    }
+
+    .page-footer__social {
+        margin: 0;
+        width: 320px;
+    }
+
+    .page-footer__copyright{
+      position: relative;
+      top: -10px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .page-footer {
+      background-color: @color-white;
+    }
+}
