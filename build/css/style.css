@@ -384,6 +384,14 @@ li {
     -ms-flex-pack: justify;
     justify-content: space-between;
   }
+  .page-header__navigation-item:hover {
+    background-color: transparent;
+    color: #81b3d2;
+  }
+  .page-header__navigation-item:active {
+    background-color: transparent;
+    color: #eee;
+  }
   .page-header__navigation-item {
     background-color: #fff;
     border: none;
