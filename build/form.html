@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Sedona</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,400i,700,700i&amp;subset=cyrillic,cyrillic-ext" rel="stylesheet">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+</head>
+
+<body>
+    <div class="wrapper">
+        <header class="page-header">
+            <nav class="page-header__navigation">
+                <ul class="page-header__navigation-items">
+                    <li class="page-header__navigation-item">
+                        <a href="index.html">
+                          Главная
+                          <span>
+                            <svg class="page-header__menu-cross" xmlns="http://www.w3.org/2000/svg" width="22.199" height="22.199" version="1">
+                              <path d="M22.2 2.804L19.395 0 11.1 8.297 2.804 0 0 2.803 8.297 11.1 0 19.396 2.803 22.2l8.297-8.3 8.296 8.297 2.803-2.804-8.298-8.296"/>
+                            </svg>
+                          </span>
+                        </a>
+                    </li>
+                    <li class="page-header__navigation-item">
+                        <a href="photo.html">Фото и видео</a>
+                    </li>
+                    <li class="page-header__navigation-item">
+                        <a href="form.html">Форма отзыва</a>
+                    </li>
+                    <li class="page-header__navigation-item">
+                        <a href="#">HTML Academy</a>
+                    </li>
+                    <li class="page-header__navigation-item">
+                        <a class="page-header__logo" href="index.html">
+                        </a>
+                        <span>
+                          <svg class="page-header__menu-burger" xmlns="http://www.w3.org/2000/svg" width="22.928" height="21.982" version="1">
+                            <path d="M0 0h22.928v3.964H0zm0 9.01h22.928v3.963H0zm0 9.008h22.928v3.964H0z"/>
+                          </svg>
+                        </span>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <div class="promo-inside">
+                <div class="promo-inside__bg">
+                    <img class="promo-inside__title" src="img/text-sedona.svg" alt="#">
+                </div>
+                <h2>Оставьте свой отзыв</h2>
+                <p>Помогите нашим отелям стать лучше! оставьте отзыв о них, а также о посещенных вами достопримечательностях</p>
+            </div>
+            <div class="form">
+                <form>
+                    <fieldset class="form__fio">
+                        <legend>Представьтесь:</legend>
+                        <label for="name">Имя*:</label>
+                        <input type="text" name="name" id="name" placeholder="Петр">
+                        <label for="surname">Фамилия*:</label>
+                        <input type="text" name="surname" id="surname" placeholder="Иванов">
+                        <label for="patronymic">Отчество:</label>
+                        <input type="text" name="patronymic" id="patronymic" placeholder="Александрович">
+                    </fieldset>
+                    <fieldset class="form__contact-information">
+                        <legend>Контактная информация:</legend>
+                        <label for="tel">Контактный телефон*:</label>
+                        <input type="tel" name="tel" id="tel" placeholder="Введите телефон">
+                        <label for="email">Электронная почта*:</label>
+                        <input type="email" name="email" id="email" placeholder="Введите e-mail">
+                    </fieldset>
+                    <fieldset class="form__impression">
+                        <legend>ВАше Общее впечатление:</legend>
+                        <label for="good-impression">Скорее положительное</label>
+                        <input type="radio" name="" id="good-impression">
+                        <label for="good-impression">Скорее отрицательное</label>
+                        <input type="radio" name="" id="bad-impression">
+                        <label for="good-impression">Затрудняюсь ответить</label>
+                        <input type="radio" name="" id="no-impression">
+                    </fieldset>
+                </form>
+            </div>
+
+        </main>
+        <footer class="page-footer">
+            <h2>#VISITSEDONA</h2>
+            <ul class="page-footer__social">
+                <li>
+                    <a class="page-footer__icon" href="#" title="#">
+                        <svg class="page-footer__icon-tw" version="1" xmlns="http://www.w3.org/2000/svg" width="17" height="14" viewBox="0 0 17.5 14.663">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M11.283.153c1.736-.484 3.074.264 3.685 1.15.694-.225 1.372-.47 2.072-.69-.004.84-.538 1.478-.883 1.728.704.17 1.343-.48 1.343-.48-.175.98-1.035 1.75-1.61 1.98-.24 6.59-3.273 10.957-10.383 10.824h-.46c-.422 0-4.29-.45-5.047-1.842 2.34.193 4.01-.41 4.835-1.15-.99-.292-2.76-.463-3.07-2.88.362.105.583.223 1.228.117C1.757 8.066.385 7.366.46 5.216c.295.32 1.1.524 1.382.46C1.117 5.447-.188 2.4.922.845 2.794 2.655 4.77 4.365 8.29 4.53 8.506 2.29 9.46.79 11.283.153z"/>
+                      </svg>
+                    </a>
+                </li>
+                <li>
+                    <a class="page-footer__icon" href="#" title="#">
+                        <svg class="page-footer__icon-fb" version="1" xmlns="http://www.w3.org/2000/svg" width="9" height="18" viewBox="0 0 8.672 18.944">
+                        <path d="M6.275 3.356h2.398V0H5.795C2.655.18 1.54 2.387 1.948 6.114H0v3.518h1.96v9.312h3.836V9.632h2.857V6.114H5.787c-.022-1.045-.037-2.405.488-2.758z"/>
+                      </svg>
+                    </a>
+                </li>
+                <li>
+                    <a class="page-footer__icon" href="#" title="#">
+                        <svg class="page-footer__icon-ytb" version="1" xmlns="http://www.w3.org/2000/svg" width="20" height="14" viewBox="0 0 19.979 14.015">
+                        <path d="M17.145 0H2.835C1.275 0 0 1.275 0 2.835v8.345c0 1.56 1.275 2.835 2.835 2.835h14.31c1.56 0 2.835-1.275 2.835-2.835V2.835C19.98 1.275 18.704 0 17.145 0zM7.035 10.392v-6.77l6.77 3.385-6.77 3.385z"/>
+                      </svg>
+                    </a>
+                </li>
+            </ul>
+            <div class="page-footer__copyright">
+                <a href="#" title="#">РАЗРАБОТАНО
+                <svg class="page-footer__icon-copyright" xmlns="http://www.w3.org/2000/svg" width="26" height="34" viewBox="0 0 26.943 34.09">
+                  <path d="M13.62.017L13.472 0 0 1.412v24.66l13.473 8.018 13.43-7.99.042-.025V1.412L13.62.017zm11.4 12.11L13.494 5.334V5.23l-.088.05-.088-.056v.11L1.924 12.117v-8.97l11.548-1.213L25.02 3.147v8.98zm-11.615-5.34L24.923 13.5l-4.48 2.64-7.092-4.22-.01 1.414 5.904 3.513-.86.507-5.03-2.992-.013 1.415 3.827 2.275-.782.523-3.03-1.787-.015 1.413 1.85 1.095-1.8 1.08-11.355-6.75 11.37-6.835zm-11.48 8.34l11.41 6.79.017 1.045-7.942-4.728-.015 1.416 7.98 4.795.017 1.076-7.973-4.74-.017 1.418 8.02 4.822.047.024 8.144-4.872-.01-5.176 3.414-2.036v10.02L13.47 31.85 1.925 24.98v-9.853z"/>
+                </svg></a>
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>
