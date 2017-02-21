@@ -1,0 +1,106 @@
+.promo-inside {
+    min-height: 350px;
+    position: relative;
+    top: -25px;
+    z-index: 1;
+    text-align: center;
+}
+
+.promo-inside__bg {
+    height: 160px;
+    text-align: center;
+    background: url("../img/bg-back-mobile@1x.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 50px 0 0;
+    position: relative;
+    @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+        background: url("../img/bg-back-mobile@2x.jpg");
+    }
+    @media (min-width: 700px) {
+        background: url("../img/bg-back-tablet@1x.jpg");
+    }
+    @media (min-width: 700px) and (min-resolution: 144dpi), (min-width: 700px) and (min-resolution: 1.5dppx) {
+        background: url("../img/bg-back-tablet@2x.jpg");
+    }
+    @media (min-width: 960px) {
+        background: url("../img/bg-back-desktop@1x.jpg");
+    }
+    @media (min-width: 960px) and (min-resolution: 144dpi), (min-width: 700px) and (min-resolution: 1.5dppx) {
+        background: url("../img/bg-back-desktop@2x.jpg");
+    }
+    margin: 0 auto 45px;
+}
+
+.promo-inside__bg::before {
+    display: block;
+    content: "";
+    position: absolute;
+    bottom: 0;
+    background-image: url("../img/bg-intro-triangle-desktop.svg");
+    background-position: bottom center;
+    background-repeat: no-repeat;
+    height: 25px;
+    width: 100%;
+}
+
+.promo-inside__title {
+    display: block;
+    width: 230px;
+    height: 40px;
+    margin: 0 auto;
+}
+
+.promo-inside h2 {
+    width: 260px;
+    margin: 0 auto 40px;
+    line-height: 26px;
+}
+
+.promo-inside p {
+    width: 270px;
+    margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+    .promo-inside {
+        top: -25px;
+    }
+
+    .promo-inside__bg {
+        height: 520px;
+    }
+
+    .promo-inside__bg::before {
+        background-position: top center;
+        height: 60px;
+        bottom: -3px;
+    }
+
+    .promo-inside h2 {
+        width: 500px;
+    }
+
+    .promo-inside p {
+        width: 500px;
+    }
+}
+@media (min-width: 1200px) {
+    .promo-inside {
+        top: 0;
+        background-color: @color-white;
+        padding: 0 0 55px;
+    }
+
+    .promo-inside__bg::before {
+        background-position: top center;
+        background-size: 102%;
+        height: 60px;
+        bottom: -2px;
+    }
+
+    .promo-inside p {
+        width: 100%;
+    }
+}
