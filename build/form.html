@@ -58,32 +58,79 @@
                 <form>
                     <fieldset class="form__fio">
                         <legend>Представьтесь:</legend>
-                        <label for="name">Имя*:</label>
-                        <input type="text" name="name" id="name" placeholder="Петр">
-                        <label for="surname">Фамилия*:</label>
-                        <input type="text" name="surname" id="surname" placeholder="Иванов">
-                        <label for="patronymic">Отчество:</label>
-                        <input type="text" name="patronymic" id="patronymic" placeholder="Александрович">
+                        <div class="form__fio-container">
+                            <div class="form__fio-container-item">
+                                <label for="name">Имя*:</label>
+                                <input type="text" name="name" id="name" placeholder="Петр">
+                            </div>
+                            <div class="form__fio-container-item">
+                                <label for="surname">Фамилия*:</label>
+                                <input type="text" name="surname" id="surname" placeholder="Иванов">
+                            </div>
+                            <div class="form__fio-container-item">
+                                <label for="patronymic">Отчество:</label>
+                                <input type="text" name="patronymic" id="patronymic" placeholder="Александрович">
+                            </div>
+                        </div>
                     </fieldset>
                     <fieldset class="form__contact-information">
                         <legend>Контактная информация:</legend>
-                        <label for="tel">Контактный телефон*:</label>
-                        <input type="tel" name="tel" id="tel" placeholder="Введите телефон">
-                        <label for="email">Электронная почта*:</label>
-                        <input type="email" name="email" id="email" placeholder="Введите e-mail">
+                        <div class="form__contact-information-containter">
+                            <div class="form__contact-information-containter-item">
+                                <label for="tel">Контактный телефон*:</label>
+                                <input type="tel" name="tel" id="tel" placeholder="Введите телефон">
+                            </div>
+                            <div class="form__contact-information-containter-item">
+                                <label for="email">Электронная почта*:</label>
+                                <input type="email" name="email" id="email" placeholder="Введите e-mail">
+                            </div>
+                        </div>
                     </fieldset>
                     <fieldset class="form__impression">
-                        <legend>ВАше Общее впечатление:</legend>
-                        <label for="good-impression">Скорее положительное</label>
-                        <input type="radio" name="" id="good-impression">
-                        <label for="good-impression">Скорее отрицательное</label>
-                        <input type="radio" name="" id="bad-impression">
-                        <label for="good-impression">Затрудняюсь ответить</label>
-                        <input type="radio" name="" id="no-impression">
+                        <legend>Ваше Общее впечатление:</legend>
+                        <div class="form__impression-containter">
+                            <div class="form__impression-containter-item">
+                                <input type="radio" name="form__impression" id="good-impression">
+                                <label for="good-impression">Скорее положительное</label>
+                            </div>
+                            <div class="form__impression-containter-item">
+                                <input type="radio" name="form__impression" id="bad-impression">
+                                <label for="bad-impression">Скорее отрицательное</label>
+                            </div>
+                            <div class="form__impression-containter-item">
+                                <input type="radio" name="form__impression" id="no-impression">
+                                <label for="no-impression">Затрудняюсь ответить</label>
+                            </div>
+                        </div>
                     </fieldset>
+                    <fieldset class="form__places">
+                        <legend>Посещенные достопримечательности:</legend>
+                        <div class="form__places-container">
+                            <div class="form__places-container-item">
+                                <input type="checkbox" name="devil's Bridge" id="devil's Bridge">
+                                <label for="devil's Bridge">Мост дьявола</label>
+                            </div>
+                            <div class="form__places-container-item">
+                                <input type="checkbox" name="slide park" id="slide park">
+                                <label for="slide park">Слайд-парк</label>
+                            </div>
+                            <div class="form__places-container-item">
+                                <input type="checkbox" name="devil's Bridge" id="mountain-Bell">
+                                <label for="mountain-Bell">Гора-Колокол</label>
+                            </div>
+                            <div class="form__places-container-item">
+                                <input type="checkbox" name="Red rocks" id="red-rocks">
+                                <label for="red-rocks">Красные скалы</label>
+                            </div>
+                        </div>
+                    </fieldset>
+                    <fieldset class="form__emmotions">
+                        <legend>Опишите свои эмоции</legend>
+                        <textarea placeholder="Опишите подробно все свои восторги "></textarea>
+                    </fieldset>
+                    <button type="submit" class="btn btn-submit">ОТПРАВИТЬ ОТЗЫВ</button>
                 </form>
             </div>
-
         </main>
         <footer class="page-footer">
             <h2>#VISITSEDONA</h2>
