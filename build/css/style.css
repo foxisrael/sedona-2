@@ -588,6 +588,24 @@ input[type="text"] {
   padding: 20px;
   width: 100%;
 }
+.icon-mobile {
+  display: block;
+  position: absolute;
+  top: 25px;
+  right: 0;
+  width: 58px;
+  height: 58px;
+  background: url("../img/icon-phone.svg") #a0998d center no-repeat;
+}
+.icon-email {
+  display: block;
+  position: absolute;
+  top: 25px;
+  right: 0;
+  width: 58px;
+  height: 58px;
+  background: url("../img/icon-mail.svg") #a0998d center no-repeat;
+}
 input[type="checkbox"],
 input[type="radio"] {
   display: none;
@@ -661,6 +679,9 @@ textarea {
 .form__places-container-item {
   margin-bottom: 60px;
 }
+.form__contact-information-containter-item {
+  position: relative;
+}
 .form__contact-information-containter-item:first-of-type {
   margin-bottom: 10px;
 }
@@ -677,6 +698,9 @@ textarea {
 }
 button {
   margin: 0 auto;
+}
+.form__required-text {
+  display: none;
 }
 @media (min-width: 700px) {
   .promo__bg {
@@ -716,6 +740,11 @@ button {
   .btn {
     width: 460px;
     height: 60px;
+  }
+  .btn-submit {
+    margin: 0 10px;
+    text-align: center;
+    width: 320px;
   }
   .page-header {
     padding: 0 50px;
@@ -1047,6 +1076,7 @@ button {
     flex-wrap: wrap;
     text-align: center;
     width: 100%;
+    padding-bottom: 65px;
   }
   .form__impression {
     -ms-flex-order: 1;
@@ -1057,6 +1087,18 @@ button {
     -ms-flex-order: 2;
     order: 2;
     width: 49%;
+    margin-bottom: 75px;
+    position: relative;
+  }
+  .form__fio::before {
+    display: block;
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -15px;
+    height: 100%;
+    width: 1px;
+    background: #eee;
   }
   .form__contact-information {
     -ms-flex-order: 3;
@@ -1074,6 +1116,14 @@ button {
     -ms-flex-order: 6;
     order: 6;
   }
+  .form__required-text {
+    -ms-flex-order: 7;
+    order: 7;
+    display: block;
+    padding-right: 10px;
+    position: relative;
+    top: 10px;
+  }
   fieldset {
     border-top: 2px solid #eee;
     padding-top: 0;
@@ -1090,9 +1140,7 @@ button {
     padding: 0 60px;
     background-color: #fff;
     font-size: 21px;
-    margin: 0 auto 85px;
-    position: relative;
-    top: -10px;
+    margin: 0 auto 40px;
   }
   .form__fio legend,
   .form__impression legend {
@@ -1100,158 +1148,68 @@ button {
   }
   .form__impression-containter legend,
   .form__places-container legend {
-    margin-bottom: 85px;
-  }
-  label {
-    display: block;
-    font-size: 14px;
-    line-height: 26px;
-    font-family: 'PT Sans', sans-serif;
-    text-transform: uppercase;
-    color: #333333;
-    margin-right: 20px;
-    cursor: pointer;
+    margin-bottom: 40px;
   }
   .form__contact-information label {
-    padding-left: 20px;
-    text-align: left;
-  }
-  .form__impression label,
-  .form__places label {
-    font-size: 18px;
-    font-weight: bold;
-    color: #000;
-    position: relative;
-    left: 75px;
-    text-transform: none;
-  }
-  ::-webkit-input-placeholder {
-    font-family: 'PT Sans', sans-serif;
-    font-size: 18px;
-    line-height: 26px;
-    font-weight: bold;
-    color: #000;
-  }
-  ::-moz-placeholder {
-    font-family: 'PT Sans', sans-serif;
-    font-size: 18px;
-    line-height: 26px;
-    font-weight: bold;
-    color: #000;
-  }
-  :-moz-placeholder {
-    font-family: 'PT Sans', sans-serif;
-    font-size: 18px;
-    line-height: 26px;
-    font-weight: bold;
-    color: #000;
-  }
-  :-ms-input-placeholder {
-    font-family: 'PT Sans', sans-serif;
-    font-size: 18px;
-    line-height: 26px;
-    font-weight: bold;
-    color: #000;
-  }
-  input[type="email"],
-  input[type="tel"],
-  input[type="text"] {
-    height: 58px;
-    background-color: #eee;
-    outline: none;
-    border: none;
-    padding: 20px;
-    width: 100%;
-  }
-  input[type="checkbox"],
-  input[type="radio"] {
-    display: none;
-  }
-  input[type="radio"] + label:before {
-    display: block;
-    position: absolute;
-    content: "";
-    top: -15px;
-    left: -75px;
-    width: 56px;
-    height: 56px;
-    border-radius: 50%;
-    background-color: #eee;
-  }
-  input[type="radio"]:checked + label:before {
-    display: block;
-    position: absolute;
-    content: "";
-    top: -15px;
-    left: -75px;
-    width: 56px;
-    height: 56px;
-    border-radius: 50%;
-    border: 17px solid #eee;
-    background-color: #333333;
-  }
-  input[type="checkbox"] + label:before {
-    display: block;
-    position: absolute;
-    content: "";
-    top: -15px;
-    left: -75px;
-    width: 56px;
-    height: 56px;
-    border-radius: 5px;
-    background: #eee;
-  }
-  input[type="checkbox"]:checked + label:before {
-    display: block;
-    position: absolute;
-    content: "";
-    top: -15px;
-    left: -75px;
-    width: 56px;
-    height: 56px;
-    border-radius: 5px;
-    background: url("../img/icon-tick.svg") no-repeat center #eee;
+    margin-bottom: 15px;
   }
   textarea {
-    display: block;
-    width: 280px;
-    height: 160px;
-    outline: none;
-    border: none;
-    padding: 20px;
-    background: #eee;
-  }
-  .form__fio-container-item,
-  .form__impression-containter-item,
-  .form__places-container-item {
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-pack: start;
-    justify-content: flex-start;
-    -ms-flex-align: center;
-    align-items: center;
-    margin-bottom: 20px;
-  }
-  .form__impression-containter-item,
-  .form__places-container-item {
-    margin-bottom: 60px;
-  }
-  .form__contact-information-containter-item:first-of-type {
-    margin-bottom: 10px;
-  }
-  .form__fio-container-item:last-of-type,
-  .form__impression-containter-item:last-of-type,
-  .form__places-container-item:last-of-type {
-    margin-bottom: 0;
+    width: 100%;
   }
   .form__contact-informatio-error {
-    color: red;
-    text-transform: none;
-    padding-left: 20px;
-    text-align: left;
+    position: absolute;
+    top: 0;
+    right: 20px;
   }
-  button {
+  input[type="email"],
+  input[type="tel"] {
+    margin-bottom: 15px;
+  }
+  .form__places-container {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+    -ms-flex-align: start;
+    align-items: flex-start;
     margin: 0 auto;
+    padding: 20px 140px;
+  }
+  .form__places-container-item {
+    width: 45%;
+  }
+  .form__places-container-item:nth-of-type(1) {
+    -ms-flex-order: 1;
+    order: 1;
+    margin-bottom: 75px;
+  }
+  .form__places-container-item:nth-of-type(2) {
+    -ms-flex-order: 3;
+    order: 3;
+    margin-bottom: 30px;
+  }
+  .form__places-container-item:nth-of-type(3) {
+    -ms-flex-order: 2;
+    order: 2;
+    margin-bottom: 75px;
+  }
+  .form__places-container-item:nth-of-type(4) {
+    -ms-flex-order: 4;
+    order: 4;
+    margin-bottom: 30px;
+  }
+  .form__places legend {
+    width: 400px;
+  }
+  .icon-mobile {
+    top: 40px;
+  }
+  .icon-email {
+    top: 40px;
   }
 }
 @media (min-width: 768px) and (-webkit-min-device-pixel-ratio: 1.5), (min-width: 768px) and (min-resolution: 144dpi), (min-width: 768px) and (min-resolution: 1.5dppx) {
@@ -1362,6 +1320,7 @@ button {
   }
   .page-footer {
     background-color: #fff;
+    padding: 0 120px;
   }
   .promo-inside {
     top: 0;
@@ -1393,6 +1352,63 @@ button {
   .video {
     padding: 40px 200px 0;
     background-color: #fff;
+  }
+  .form {
+    background: #fff;
+    padding: 0 120px;
+  }
+  .form__contact-information-containter {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -ms-flex-align: start;
+    align-items: flex-start;
+  }
+  .form__contact-information-containter-item {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    -ms-flex-align: center;
+    align-items: center;
+    width: 50%;
+  }
+  .form__contact-information label {
+    padding: 0;
+  }
+  input[type="email"],
+  input[type="tel"] {
+    width: 255px;
+  }
+  .hidden-text {
+    display: none;
+  }
+  .icon-mobile {
+    top: 0;
+    right: 65px;
+  }
+  .icon-email {
+    top: 0;
+    right: 0;
+  }
+  .form__contact-information {
+    padding-top: 30px;
+  }
+  .form__contact-informatio-error {
+    top: -30px;
+    right: 170px;
+  }
+  .form__places legend {
+    width: 550px;
+  }
+  .form__places-container {
+    padding: 30px 0 0;
+  }
+  .form__places-container-item {
+    width: 25%;
   }
 }
 @media (min-width: 1200px) and (-webkit-min-device-pixel-ratio: 1.5), (min-width: 1200px) and (min-resolution: 144dpi), (min-width: 1200px) and (min-resolution: 1.5dppx) {

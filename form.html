@@ -56,8 +56,8 @@
             </div>
             <form class="form">
                 <fieldset class="form__fio">
+                  <legend>Представьтесь:</legend>
                     <div class="form__fio-container">
-                        <legend>Представьтесь:</legend>
                         <div class="form__fio-container-item">
                             <label for="name">Имя*:</label>
                             <input type="text" name="name" id="name" placeholder="Петр">
@@ -73,22 +73,24 @@
                     </div>
                 </fieldset>
                 <fieldset class="form__contact-information">
+                  <legend>Контактная информация:</legend>
                     <div class="form__contact-information-containter">
-                        <legend>Контактная информация:</legend>
                         <div class="form__contact-information-containter-item">
-                            <label for="tel">Контактный телефон*:</label>
-                            <input type="tel" name="tel" id="tel" placeholder="Введите телефон">
+                            <label for="tel"><span class="hidden-text">Контактный</span> телефон*:</label>
+                            <input type="tel" name="tel" id="tel" placeholder="Введите номер">
                             <p class="form__contact-informatio-error">Ошибка, перепроверьте номер</p>
+                            <span class="icon-mobile"></span>
                         </div>
                         <div class="form__contact-information-containter-item">
                             <label for="email">Электронная почта*:</label>
                             <input type="email" name="email" id="email" placeholder="Введите e-mail">
+                            <span class="icon-email"></span>
                         </div>
                     </div>
                 </fieldset>
                 <fieldset class="form__impression">
+                  <legend>Ваше Общее впечатление:</legend>
                     <div class="form__impression-containter">
-                        <legend>Ваше Общее впечатление:</legend>
                         <div class="form__impression-containter-item">
                             <input type="radio" name="form__impression" id="good-impression" checked>
                             <label for="good-impression">Скорее положительное</label>
@@ -104,8 +106,8 @@
                     </div>
                 </fieldset>
                 <fieldset class="form__places">
+                  <legend>Посещенные достопримечательности:</legend>
                     <div class="form__places-container">
-                        <legend>Посещенные достопримечательности:</legend>
                         <div class="form__places-container-item">
                             <input type="checkbox" name="devil's Bridge" id="devil's Bridge" checked>
                             <label for="devil's Bridge">Мост дьявола</label>
@@ -125,12 +127,11 @@
                     </div>
                 </fieldset>
                 <fieldset class="form__emmotions">
-                  <div class="form__emmotions-container">
-                    <legend>Опишите свои эмоции</legend>
+                  <legend>Опишите свои эмоции</legend>
                     <textarea placeholder="Опишите подробно все свои восторги "></textarea>
-                  </div>
                 </fieldset>
                 <button type="submit" class="btn btn-submit">ОТПРАВИТЬ ОТЗЫВ</button>
+                <p class="form__required-text">* — обязательные поля</p>
             </form>
         </main>
         <footer class="page-footer">
