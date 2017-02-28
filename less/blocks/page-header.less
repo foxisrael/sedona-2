@@ -18,6 +18,11 @@
     color: rgba(255, 255, 255, 0.3);
 }
 
+.page-header__navigation-item a:visited {
+    background-color: @color-blue;
+    color: @color-white;
+}
+
 .page-header__navigation-item:first-child {
     border-top: none;
 }
@@ -68,12 +73,16 @@
 
     .page-header__navigation-item:hover {
         background-color: transparent;
-        color: @color-blue;
+        color: @color-blue-hover;
     }
 
     .page-header__navigation-item:active {
-      background-color: transparent;
-      color: @color-lightgray;
+        background-color: transparent;
+        color: @color-blue-active;
+    }
+
+    .page-header__navigation-item a:visited {
+        color: @color-black;
     }
 
     .page-header__navigation-item {
@@ -133,5 +142,4 @@
         height: 100px;
         margin: 0 auto;
     }
-
 }

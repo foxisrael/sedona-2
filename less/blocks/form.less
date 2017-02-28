@@ -32,12 +32,13 @@ legend {
     font-family: @font-family;
     text-transform: uppercase;
     text-align: center;
-    margin: 0 auto 25px;
+    margin: 0 auto;
+    padding-top: 25px;
 }
 
-.form__impression-containter legend,
-.form__places-container legend {
-    margin-bottom: 40px;
+.form__impression legend,
+.form__places legend {
+    margin-bottom: 25px;
 }
 
 label {
@@ -104,10 +105,25 @@ input[type="tel"],
 input[type="text"] {
     height: 58px;
     background-color: @color-lightgray;
+    border: 4px solid @color-lightgray;
     outline: none;
     border: none;
     padding: 20px;
     width: 100%;
+}
+
+input[type="email"]:hover,
+input[type="tel"]:hover,
+input[type="text"]:hover {
+    background-color: @color-blue-disabled;
+    border: 4px solid @color-blue-disabled;
+}
+
+input[type="email"]:active,
+input[type="tel"]:active,
+input[type="text"]:active {
+    background-color: @color-white;
+    border: 4px solid @color-lightgray;
 }
 
 .icon-mobile {
@@ -117,7 +133,7 @@ input[type="text"] {
     right: 0;
     width: 58px;
     height: 58px;
-    background: url("../img/icon-phone.svg") #a0998d center no-repeat;
+    background: url("../img/icon-phone.svg") #e6e6e6 center no-repeat;
 }
 
 .icon-email {
@@ -127,7 +143,7 @@ input[type="text"] {
     right: 0;
     width: 58px;
     height: 58px;
-    background: url("../img/icon-mail.svg") #a0998d center no-repeat;
+    background: url("../img/icon-mail.svg") #e6e6e6 center no-repeat;
 }
 
 input[type="checkbox"],
@@ -147,6 +163,14 @@ input[type="radio"] + label:before {
     background-color: @color-lightgray;
 }
 
+input[type="radio"] + label:hover:before {
+    background-color: @color-blue-disabled;
+}
+
+input[type="radio"] + label:active:before {
+    background-color: #d5d5d5;
+}
+
 input[type="radio"]:checked + label:before {
     display: block;
     position: absolute;
@@ -158,6 +182,16 @@ input[type="radio"]:checked + label:before {
     border-radius: 50%;
     border: 17px solid @color-lightgray;
     background-color: @color-gray;
+}
+
+input[type="radio"]:checked + label:hover:before {
+    border: 17px solid @color-blue-disabled;
+    background-color: @color-gray;
+}
+
+input[type="radio"]:checked + label:active:before {
+    border: 17px solid #d5d5d5;
+    background-color: #a4a4a4;
 }
 
 input[type="checkbox"] + label:before {
@@ -172,6 +206,14 @@ input[type="checkbox"] + label:before {
     background: @color-lightgray;
 }
 
+input[type="checkbox"] + label:hover:before {
+    background-color: @color-blue-disabled;
+}
+
+input[type="checkbox"] + label:active:before {
+    background-color: #d5d5d5;
+}
+
 input[type="checkbox"]:checked + label:before {
     display: block;
     position: absolute;
@@ -181,7 +223,17 @@ input[type="checkbox"]:checked + label:before {
     width: 56px;
     height: 56px;
     border-radius: 5px;
+    background: url("../img/icon-tick.svg") no-repeat center #f2f2f2;
+}
+
+input[type="checkbox"]:checked + label:hover:before {
+    background-color: #e5e5e5;
     background: url("../img/icon-tick.svg") no-repeat center @color-lightgray;
+}
+
+input[type="checkbox"]:checked + label:active:before {
+    background-color: #d5d5d5;
+    background: url("../img/icon-tick.svg") no-repeat center #d5d5d5;
 }
 
 textarea {
@@ -192,6 +244,16 @@ textarea {
     border: none;
     padding: 20px;
     background: @color-lightgray;
+    border: 4px solid @color-lightgray;
+}
+
+textarea:hover {
+    background: #e5e5e5;
+}
+
+textarea:active {
+    background: @color-white;
+    border: 4px solid @color-lightgray;
 }
 
 .form__fio-container-item,
@@ -426,7 +488,7 @@ button {
 
     .icon-mobile {
         top: 0;
-        right: 65px;
+        right: 66vpx;
     }
 
     .icon-email {
